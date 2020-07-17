@@ -1,2 +1,2 @@
-import Explainer from './components/DummyButton.vue'
+import Explainer from './components/Explainer.vue'
 export default Explainer

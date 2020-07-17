@@ -21,8 +21,11 @@
           <ImageHighlight
             v-for="area in activeAreas"
             :key="area.id"
-            :highlighted="activeId === area.id"
+            :highlighted="clickedId === area.id"
+            :activeHover="activeId === area.id"
             @rect-click="setId(area.id)"
+            @rect-active="setActive(area.id, true)"
+            @rect-inactive="setActive(area.id, false)"
             v-bind="area"/>
         </div>
       </div>
@@ -33,10 +36,13 @@
             v-for="area in activeAreas"
             :key="area.id"
             :title="area.title"
-            :expanded="activeId === area.id"
+            :expanded="clickedId === area.id"
+            :activeHover="activeId === area.id"
             @header-click="setId(area.id)"
+            @header-active="setActive(area.id, true)"
+            @header-inactive="setActive(area.id, false)"
             >
-            {{activeId}} - {{ area.id }} - {{ area.description }}
+            {{clickedId}} - {{ area.id }} - {{ area.description }}
           </Expandable>
         </ul>
       </div>
@@ -90,16 +96,24 @@ export default {
           bottom: "91%"
         }
       ],
-      activeId: null,
-      activePage: 1
+      clickedId: null,
+      activePage: 1,
+      activeId: null
     }
   },
   methods: {
-    setId: function (clickedId) {
-      this.activeId = this.activeId === clickedId ? null : clickedId;
+    setId(clickedId) {
+      this.clickedId = this.clickedId === clickedId ? null : clickedId;
     },
-    setPage: function(clickedPage) {
+    setPage(clickedPage) {
       this.activePage = clickedPage;
+    },
+    setActive(areaId, active) {
+      if (active) {
+        this.activeId = areaId
+      } else {
+        this.activeId = null
+      }
     },
     getImgUrl(page) {
       return require('../assets/sample_Page_'+page+'.png')
@@ -123,5 +137,4 @@ export default {
   position: sticky;
   border-style: solid;
 }
-
 </style>

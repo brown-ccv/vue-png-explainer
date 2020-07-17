@@ -7,9 +7,9 @@ An explainer inspired by [CFPB's home closing site](https://www.consumerfinance.
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development (requires vue-cli to be globally installed)
 ```
-vue serve src/components/Explainer.vue
+vue serve demo/components/PaginatedExplainer.vue
 ```
 
 ### Compiles and minifies for production

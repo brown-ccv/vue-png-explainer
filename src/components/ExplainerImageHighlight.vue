@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'ImageHighlight',
+  name: 'ExplainerImageHighlight',
   props: {
     top: {
       type: String,

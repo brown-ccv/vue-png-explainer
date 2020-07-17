@@ -4,6 +4,7 @@
       <div class="level-left">
         <p class="level-item">Page:</p>
         <a
+          tab-index=0
           v-for="page in pages"
           :key="page"
           class="level-item page-link"

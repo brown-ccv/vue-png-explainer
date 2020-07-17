@@ -1,4 +1,6 @@
-# pdf-explainer
+# vue-png-explainer
+
+An explainer inspired by [CFPB's home closing site](https://www.consumerfinance.gov/owning-a-home/closing-disclosure/).
 
 ## Project setup
 ```

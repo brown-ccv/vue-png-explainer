@@ -47,7 +47,7 @@ export default {
           id: 2,
           page: 1,
           title: "item 2",
-          description: "I am a description for item 2",
+          description: "I am a description for item 2 with a <a href='www.google.com'>link</a>",
           top: "50%",
           right: "10%",
           left: "40%",

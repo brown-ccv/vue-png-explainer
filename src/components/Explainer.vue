@@ -23,7 +23,7 @@
           @header-active="setActive({areaId: area.id, active: true})"
           @header-inactive="setActive({areaId: area.id, active: false})"
           >
-          {{clickedId}} - {{ area.id }} - {{ area.description }}
+          <span v-html="area.description"></span>
         </Expandable>
       </ul>
     </div>

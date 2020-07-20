@@ -1,13 +1,14 @@
 {
-  "name": "pdf-explainer",
+  "name": "vue-png-explainer",
   "version": "0.1.0",
   "private": true,
-  "main": "./dist/pdf-explainer.common.js",
+  "main": "./dist/vue-png-explainer.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-lib": "vue-cli-service build --target lib --name pdf-explainer src/main.js"
+    "build-lib": "vue-cli-service build --target lib --name vue-png-explainer src/main.js",
+    "release": "semantic-release"
   },
   "dependencies": {
     "bulma": "^0.9.0",

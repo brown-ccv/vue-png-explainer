@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import ExplainerImageHighlight from '@/components/ExplainerImageHighlight'
+import ExplainerImageHighlight from '@/components/ExplainerImageHighlight.vue'
 
 export default {
   name: 'ExplainerImage',

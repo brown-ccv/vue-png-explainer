@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import Expandable from '@/components/Expandable'
-import ExplainerImage from '@/components/ExplainerImage'
+import Expandable from '@/components/Expandable.vue'
+import ExplainerImage from '@/components/ExplainerImage.vue'
 
 export default {
   name: 'Explainer',

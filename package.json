@@ -69,5 +69,8 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
   }
 }

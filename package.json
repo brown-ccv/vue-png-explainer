@@ -8,6 +8,9 @@
     "email": "mary_mcgrath@brown.edu"
   },
   "main": "./dist/vue-png-explainer.common.js",
+  "browser": {
+    "./sfc": "src/components/Explainer.vue"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

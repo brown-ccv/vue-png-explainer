@@ -20,6 +20,8 @@
   </div>
 </template>
 
+<style lang="sass" src="bulma"></style>
+
 <script>
 import Explainer from '@/components/Explainer'
 

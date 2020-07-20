@@ -1,7 +1,12 @@
 {
-  "name": "vue-png-explainer",
+  "name": "@brown-ccvvue-png-explainer",
   "version": "1.0.0",
   "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "Mary McGrath",
+    "email": "mary_mcgrath@brown.edu"
+  },
   "main": "./dist/vue-png-explainer.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",

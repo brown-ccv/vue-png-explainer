@@ -7,7 +7,7 @@
     "name": "Mary McGrath",
     "email": "mary_mcgrath@brown.edu"
   },
-  "main": "dist/vue-png-explainer.umd.js",
+  "main": "dist/vue-png-explainer.common.js",
   "module": "dist/vue-png-explainer.esm.js",
   "unpkg": "dist/vue-png-explainer.min.js",
   "browser": {
@@ -19,6 +19,7 @@
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "build-lib": "vue-cli-service build --target lib src/components/index.js",
     "lint": "vue-cli-service lint",
     "release": "semantic-release --branches main"
   },

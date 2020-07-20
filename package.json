@@ -1,7 +1,7 @@
 {
   "name": "vue-png-explainer",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "main": "./dist/vue-png-explainer.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",

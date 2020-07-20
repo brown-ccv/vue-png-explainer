@@ -2,6 +2,13 @@
 
 An explainer inspired by [CFPB's home closing site](https://www.consumerfinance.gov/owning-a-home/closing-disclosure/).
 
+## Prerequisites
+```
+npm install -g @vue/cli
+npm install -g @vue/cli-service-global
+```
+
+
 ## Project setup
 ```
 npm install

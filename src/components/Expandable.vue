@@ -2,27 +2,27 @@
   <div class="expandable margin-x-2 margin-y-2">
     <header
       class="expandable-header margin-bottom-0 usa-accordion__heading"
-      @click="onSelect"
+
       @mouseover="setActive(true)"
       @mouseout="setActive(false)"
       @focus="setActive(true)"
       @blur="setActive(false)"
+      @click.capture.stop="onSelect"
+      @keyup.capture.stop.enter="onSelect"
+      @keyup.capture.stop.space="onSelect"
       tabindex="0"
-      role="button"
-      :aria-pressed="expanded"
     >
 
-      <button
+      <div
         class="usa-accordion__button"
         v-bind:class="classObject"
         :aria-expanded="expanded ? 'true' : 'false'"
-        :aria-controls="'a-'+areaid"
       >
         {{ title }}
-      </button>
+      </div>
     </header>
 
-    <div v-show="expanded" :id="'a-'+areaid" class="bg-base-lightest usa-accordion__content usa-prose">
+    <div v-show="expanded" class="bg-base-lightest usa-accordion__content usa-prose">
       <slot></slot>
     </div>
   </div>

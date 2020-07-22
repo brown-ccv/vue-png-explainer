@@ -1,31 +1,31 @@
 <template>
-  <li class="expandable mx-2 my-2">
+  <div class="expandable margin-x-2 margin-y-2">
     <header
-      class="level is-mobile expandable-header mb-0 px-3 py-2"
-      v-bind:class="classObject"
+      class="expandable-header margin-bottom-0 usa-accordion__heading"
       @click="onSelect"
-      @keyup.enter="onSelect"
       @mouseover="setActive(true)"
       @mouseout="setActive(false)"
       @focus="setActive(true)"
       @blur="setActive(false)"
       tabindex="0"
       role="button"
-      :aria-pressed="expanded">
-      <div class="level-left">
-        <h4 class="level-item is-size-4">{{ title }}</h4>
-      </div>
+      :aria-pressed="expanded"
+    >
 
-      <div class="level-right">
-        <p v-if="expanded" class="level-item">hide</p>
-        <p v-else class="level-item">show</p>
-      </div>
+      <button
+        class="usa-accordion__button"
+        v-bind:class="classObject"
+        :aria-expanded="expanded ? 'true' : 'false'"
+        :aria-controls="'a-'+areaid"
+      >
+        {{ title }}
+      </button>
     </header>
 
-    <div v-show="expanded" class="px-3 py-3 has-background-white-ter is-size-6">
+    <div v-show="expanded" :id="'a-'+areaid" class="bg-base-lightest usa-accordion__content usa-prose">
       <slot></slot>
     </div>
-  </li>
+  </div>
 </template>
 
 <script>
@@ -43,6 +43,9 @@ export default {
     activeHover: {
       type: Boolean,
       default: false
+    },
+    areaid: {
+      required: true
     }
   },
   methods: {
@@ -60,9 +63,8 @@ export default {
   computed: {
     classObject: function () {
       return {
-        'has-background-grey-lighter': !this.expanded,
-        'has-background-primary': this.expanded,
-        'active-hover': this.activeHover
+        'bg-base-light': !this.expanded,
+        'bg-primary-light': this.expanded
       }
     }
   }
@@ -72,10 +74,5 @@ export default {
 <style scoped>
 .expandable-header {
   cursor: pointer;
-}
-
-.active-hover {
-  border-style: solid;
-  border-radius: 4px;
 }
 </style>

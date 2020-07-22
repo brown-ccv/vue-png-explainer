@@ -9,7 +9,7 @@
   },
   "main": "dist/vue-png-explainer.common.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve demo/main.js",
     "build-lib": "vue-cli-service build --target lib src/components/index.js",
     "lint": "vue-cli-service lint",
     "release": "semantic-release --branches main"
@@ -30,6 +30,7 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.2",
     "semantic-release": "^17.1.1",
+    "uswds": "^2.8.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

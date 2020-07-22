@@ -54,8 +54,8 @@ export default {
   computed: {
     classObject: function () {
       return {
-        'has-background-primary-light': !this.highlighted,
-        'has-background-primary': this.highlighted,
+        'bg-primary-light': !this.highlighted,
+        'bg-primary': this.highlighted,
         'active-hover': this.activeHover
       }
     }

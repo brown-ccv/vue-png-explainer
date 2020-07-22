@@ -1,21 +1,22 @@
 <template>
-  <div class="columns is-tablet">
-    <div class="column">
-      <ExplainerImage
-        :imageSrc="imageSrc"
-        :areas="areas"
-        :clickedId="clickedId"
-        :activeId="activeId"
-        @change-clicked="setClicked"
-        @change-active="setActive"
-        />
-    </div>
+  <div class="grid-containter">
+    <div class="grid-row">
+      <div class="tablet:grid-col">
+        <ExplainerImage
+          :imageSrc="imageSrc"
+          :areas="areas"
+          :clickedId="clickedId"
+          :activeId="activeId"
+          @change-clicked="setClicked"
+          @change-active="setActive"
+          />
+      </div>
 
-    <div class="column">
-      <ul>
+      <div class="tablet:grid-col usa-accordion usa-accordion--bordered ">
         <Expandable
           v-for="area in areas"
           :key="area.id"
+          :areaid="area.id"
           :title="area.title"
           :expanded="clickedId === area.id"
           :activeHover="activeId === area.id"
@@ -25,7 +26,7 @@
           >
           <span v-html="area.description"></span>
         </Expandable>
-      </ul>
+      </div>
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
    <div class="container">
-    <div class="level is-mobile paginator px-5">
+    <div class="level is-mobile paginator padding-x-5">
       <div class="level-left">
         <p class="level-item">Page:</p>
         <a
@@ -20,12 +20,14 @@
   </div>
 </template>
 
-<style lang="sass" src="bulma"></style>
+<!-- <style lang="css" src="uswds"></style> -->
 
 <script>
 import Explainer from '@/components/Explainer'
 
 import * as _ from 'lodash';
+import './../../node_modules/uswds/dist/css/uswds.min.css';
+import './../../node_modules/uswds/dist/js/uswds.min.js';
 
 export default {
   name: 'PaginatedExplainer',

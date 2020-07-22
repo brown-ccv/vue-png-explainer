@@ -26,21 +26,14 @@ import './../node_modules/uswds/dist/css/uswds.min.css';
 import './../node_modules/uswds/dist/js/uswds.min.js';
 ```
 
-## Prerequisites
-```
-npm install -g @vue/cli
-npm install -g @vue/cli-service-global
-```
-
-
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development (requires vue-cli to be globally installed)
+### Compiles and hot-reloads a demo component for development (requires vue-cli to be globally installed)
 ```
-vue serve demo/components/PaginatedExplainer.vue
+npm run serve
 ```
 
 ### Compiles and minifies for production

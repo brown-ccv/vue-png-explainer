@@ -28,7 +28,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.2",
-    "semantic-release": "^17.1.1",
+    "semantic-release": "^17.2.3",
     "uswds": "^2.8.0",
     "vue-template-compiler": "^2.6.11"
   },

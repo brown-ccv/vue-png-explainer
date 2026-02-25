@@ -1,5 +1,10 @@
 # vue-png-explainer
 
+![Static Badge](https://img.shields.io/badge/ARCHIVED-red)
+
+**This repo was archived February 2026, we have moved away from Vue for the most part in favor of React.**
+---
+
 An explainer inspired by [CFPB's home closing site](https://www.consumerfinance.gov/owning-a-home/closing-disclosure/).
 
 ## Installation:
